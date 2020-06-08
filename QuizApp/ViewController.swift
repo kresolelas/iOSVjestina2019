@@ -13,34 +13,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var bgImage: UIImageView!
     @IBOutlet weak var funFactText: UILabel!
     @IBOutlet weak var errorView: UILabel!
-    @IBAction func dohvatiKlik(_ sender: Any) {
-        getQuizzes()
-        
-    }
+   
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-    func getQuizzes(){
-        let url = "https://iosquiz.herokuapp.com/api/quizzes"
-        let quizServis = QuizServis()
-        
-        quizServis.fetch(urlString: url){ (quizCollection) in
-           DispatchQueue.main.async {
-                print(quizCollection?.allQuizzes)
-            if quizCollection==nil {
-                self.errorView.isHidden = false
-            }else{
-                self.showData(data: quizCollection!.allQuizzes)
-            }
-
-           }
-        }
-        
-    }
-
+    
     func showData(data:[Quiz]){
         
         var numOfNba = 0
