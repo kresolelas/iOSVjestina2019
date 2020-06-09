@@ -23,49 +23,69 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SLs-1N-wIx">
-                    <rect key="frame" x="14" y="44" width="400" height="167"/>
+                    <rect key="frame" x="10" y="44" width="394" height="167"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Opis Kviza" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4k-gg-lwS">
-                            <rect key="frame" x="96" y="78" width="80" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xwj-sG-vgM">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xwj-sG-vgM">
                             <rect key="frame" x="8" y="8" width="80" height="80"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="80" id="wZ4-yn-BZg"/>
                                 <constraint firstAttribute="height" constant="80" id="y9l-v7-iUV"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titl kviza" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z2X-hN-twv">
-                            <rect key="frame" x="96" y="8" width="125" height="65"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titl kviza" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z2X-hN-twv">
+                            <rect key="frame" x="96" y="8" width="229.5" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="flame.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="b3f-Wq-mhQ">
-                            <rect key="frame" x="366" y="8" width="20" height="20"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="flame.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7LS-1s-0TV">
-                            <rect key="frame" x="344" y="8" width="20" height="20"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="flame.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gGZ-RP-JLR">
-                            <rect key="frame" x="323" y="8" width="20" height="20"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eNn-b2-MwX">
+                            <rect key="frame" x="333.5" y="8" width="52.5" height="20"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flame.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="b3f-Wq-mhQ">
+                                    <rect key="frame" x="0.0" y="-1" width="17.5" height="20.5"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flame.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7LS-1s-0TV">
+                                    <rect key="frame" x="17.5" y="-1" width="17.5" height="20.5"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flame.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gGZ-RP-JLR">
+                                    <rect key="frame" x="35" y="-1" width="17.5" height="20.5"/>
+                                </imageView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="52.5" id="OdH-sB-XAE"/>
+                                <constraint firstAttribute="height" constant="20" id="w2U-II-nh7"/>
+                            </constraints>
+                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opis Kviza" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4k-gg-lwS">
+                            <rect key="frame" x="96" y="40.5" width="240" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="j1a-1l-Nyh"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
+                        <constraint firstAttribute="trailing" secondItem="a4k-gg-lwS" secondAttribute="trailing" constant="58" id="08U-dA-AX0"/>
+                        <constraint firstItem="z2X-hN-twv" firstAttribute="top" secondItem="SLs-1N-wIx" secondAttribute="top" constant="8" id="6F8-uk-jEx"/>
+                        <constraint firstItem="eNn-b2-MwX" firstAttribute="top" secondItem="SLs-1N-wIx" secondAttribute="top" constant="8" id="6Pg-dx-Xcm"/>
+                        <constraint firstItem="Xwj-sG-vgM" firstAttribute="leading" secondItem="SLs-1N-wIx" secondAttribute="leading" constant="8" id="MNP-fS-mZC"/>
+                        <constraint firstItem="a4k-gg-lwS" firstAttribute="leading" secondItem="Xwj-sG-vgM" secondAttribute="trailing" constant="8" id="N4R-QV-qLV"/>
+                        <constraint firstItem="a4k-gg-lwS" firstAttribute="top" secondItem="z2X-hN-twv" secondAttribute="bottom" constant="12" id="WDU-Gt-5sw"/>
+                        <constraint firstItem="eNn-b2-MwX" firstAttribute="leading" secondItem="z2X-hN-twv" secondAttribute="trailing" constant="8" id="Xky-Hk-lUA"/>
+                        <constraint firstAttribute="trailing" secondItem="eNn-b2-MwX" secondAttribute="trailing" constant="8" id="kq2-CD-lXC"/>
+                        <constraint firstItem="z2X-hN-twv" firstAttribute="leading" secondItem="Xwj-sG-vgM" secondAttribute="trailing" constant="8" id="n21-7W-kcv"/>
                         <constraint firstAttribute="height" constant="167" id="ui7-6Y-zJ8"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="SLs-1N-wIx" secondAttribute="trailing" constant="10" id="2q9-85-uFl"/>
+                <constraint firstItem="SLs-1N-wIx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="b7W-WO-3vn"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="137.68115942028987" y="107.8125"/>
         </view>

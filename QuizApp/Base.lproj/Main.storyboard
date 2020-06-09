@@ -13,7 +13,7 @@
                 <viewController id="Kes-Vo-DDF" customClass="LoginViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="A9u-T6-0x7"/>
                     <connections>
-                        <segue destination="dmK-97-pAw" kind="show" identifier="prijelazNaListu" id="bi2-qA-zkB"/>
+                        <segue destination="dmK-97-pAw" kind="show" identifier="prijelazNaListu" animates="NO" id="bi2-qA-zkB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ooG-8v-dIO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -55,6 +55,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNL-8p-agA">
+                                <rect key="frame" x="0.0" y="262" width="414" height="610"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="e9r-bd-ME1"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="pkZ-m9-aE0"/>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhE-vx-yGf">
+                                <rect key="frame" x="132" y="44" width="150" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="ZAPOČNI">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="zapocniClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UNa-Sy-by8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -64,11 +81,12 @@
                         <outlet property="bgImage" destination="dp2-TQ-D1R" id="ROS-ef-yKr"/>
                         <outlet property="errorView" destination="hQ0-LP-MT0" id="L0P-VN-f87"/>
                         <outlet property="funFactText" destination="gER-mX-0Mn" id="vPo-Hx-7rV"/>
+                        <outlet property="questionsScrollView" destination="bNL-8p-agA" id="nLT-N1-6po"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1299" y="108"/>
+            <point key="canvasLocation" x="1257" y="108"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BNH-NR-6VY">
@@ -92,6 +110,9 @@
             <objects>
                 <viewController id="dmK-97-pAw" customClass="QuizListController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="mKi-7q-O5b"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toMain" id="YAC-bZ-ugP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eIg-Hy-1pK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

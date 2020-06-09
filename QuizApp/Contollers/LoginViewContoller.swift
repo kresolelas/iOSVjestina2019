@@ -31,7 +31,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
     
         super.viewDidLoad()
-        if UserDefaults.standard.object(forKey: "user_id") != nil{
+        if UserDefaults.standard.object(forKey: "user_id") != nil && UserDefaults.standard.object(forKey: "user_token") != nil{
             performSegue(withIdentifier: "prijelazNaListu", sender: nil)
         }
     

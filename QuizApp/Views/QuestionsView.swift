@@ -47,19 +47,17 @@ class QuestionsView: UIView{
         addSubview(rootView)
         rootView.frame = self.bounds
         rootView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        print("upali smo")
+
     }
     
-    func showQuestionAndAnswers(quiz : Quiz){
+    func showQuestionAndAnswers(quiz : Quiz , odabrano: Int){
         
         if quiz.category == "SPORTS" {
             rootView.backgroundColor = UIColor(hue: 0.7278, saturation: 0.2, brightness: 0.94, alpha: 1.0)
         } else {
             rootView.backgroundColor = UIColor(hue: 0.9472, saturation: 0.2, brightness: 0.94, alpha: 1.0)
         }
-       
-        let randPitanje = Int.random(in: 0..<quiz.questions.count)
-        let question = quiz.questions[randPitanje]
+        let question = quiz.questions[odabrano]
         questionTextBox.text = question.question
         
         correctAnswer = question.correctAnswer
@@ -78,11 +76,13 @@ class QuestionsView: UIView{
     
     
     func btnPressed(num: Int, sender: UIView){
-        
         if num == correctAnswer {
-            sender.backgroundColor = UIColor.green
+            //tocanodovor kliknut
+            NotificationCenter.default.post(name: Notification.Name("answered"), object: nil,userInfo: ["correct": true])
+            rootView.backgroundColor = UIColor.green
         } else {
-            sender.backgroundColor = UIColor.red
+             NotificationCenter.default.post(name: Notification.Name("answered"), object: nil,userInfo: ["correct": false])
+            rootView.backgroundColor = UIColor.red
         }
         
     }
