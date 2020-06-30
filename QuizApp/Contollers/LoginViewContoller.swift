@@ -2,8 +2,8 @@
 //  LoginViewContoller.swift
 //  QuizApp
 //
-//  Created by sara on 06/06/2020.
-//  Copyright © 2020 sara. All rights reserved.
+//  Created by Kreso Lelas on 06/06/2020.
+//  Copyright © 2020 kreso. All rights reserved.
 //
 
 import UIKit
@@ -31,12 +31,22 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
     
         super.viewDidLoad()
+        animation(viewAnimation: usernameField)
         if UserDefaults.standard.object(forKey: "user_id") != nil && UserDefaults.standard.object(forKey: "user_token") != nil{
             performSegue(withIdentifier: "prijelazNaListu", sender: nil)
         }
     
     }
+    private func animation(viewAnimation: UIView) {
+        UIView.animate(withDuration: 1, animations: {
+            viewAnimation.frame.origin.x = -viewAnimation.frame.width*3
+        }) { (_) in
+            UIView.animate(withDuration: 1, delay: 1, options: [.curveEaseIn], animations: {
+                viewAnimation.frame.origin.x -= viewAnimation.frame.width
+            })
 
+        }
+    }
     func login(){
         
            let username = String(usernameField.text ?? "")

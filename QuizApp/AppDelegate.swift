@@ -2,16 +2,27 @@
 //  AppDelegate.swift
 //  QuizApp
 //
-//  Created by sara on 11/05/2020.
-//  Copyright © 2020 sara. All rights reserved.
+//  Created by Kreso Lelas on 11/05/2020.
+//  Copyright © 2020 kreso. All rights reserved.
 //
 
 import UIKit
+import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    lazy var persistentContainer: NSPersistentContainer = {
 
+        let container = NSPersistentContainer(name: "QuizDataModel")
+        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            if let error = error {
+
+                fatalError("Unresolved error, \((error as NSError).userInfo)")
+            }
+        })
+        return container
+    }()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

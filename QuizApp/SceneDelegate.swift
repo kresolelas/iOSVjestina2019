@@ -2,8 +2,8 @@
 //  SceneDelegate.swift
 //  QuizApp
 //
-//  Created by sara on 11/05/2020.
-//  Copyright © 2020 sara. All rights reserved.
+//  Created by Kreso Lelas on 11/05/2020.
+//  Copyright © 2020 kreso. All rights reserved.
 //
 
 import UIKit

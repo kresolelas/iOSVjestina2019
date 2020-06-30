@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  QuizApp
 //
-//  Created by sara on 11/05/2020.
-//  Copyright © 2020 sara. All rights reserved.
+//  Created by Kreso Lelas on 11/05/2020.
+//  Copyright © 2020 kreso. All rights reserved.
 //
 
 import UIKit
@@ -11,6 +11,9 @@ import UIKit
 class ViewController: UIViewController {
     
     
+    @IBAction func checkLeaderBoard(_ sender: Any) {
+        goToLeaderBoard()
+    }
     @IBOutlet weak var questionsScrollView: UIScrollView!
     @IBOutlet weak var bgImage: UIImageView!
     @IBOutlet weak var funFactText: UILabel!
@@ -109,7 +112,7 @@ class ViewController: UIViewController {
       let token = UserDefaults.standard.object(forKey: "user_token")
         print ("user token je ", token)
  
-      let parameters = ["quiz_id": chosenQuiz?.id, "user_id": userid,"time": time,"no_of_correct":numOfCorrect]
+        let parameters = ["quiz_id": chosenQuiz?.id, "user_id": userid,"time": time,"no_of_correct":numOfCorrect]
         let url = URL(string: "https://iosquiz.herokuapp.com/api/result")!
         let session = URLSession.shared
         var request = URLRequest(url: url)
@@ -141,4 +144,15 @@ class ViewController: UIViewController {
         task.resume()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+              if (segue.identifier == "toLeaderBoard") {
+               print("segue preparean")
+               let sDest = segue.destination as? LeaderboardsViewController
+                sDest!.chosenQuizId = chosenQuiz?.id
+              }
+          }
+    func goToLeaderBoard(){
+                   //to je odabrani kviz salji te podatke i id dalje
+                   performSegue(withIdentifier: "toLeaderBoard", sender: nil)
+           }
 }

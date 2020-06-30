@@ -2,8 +2,8 @@
 //  QuestionsView.swift
 //  QuizApp
 //
-//  Created by sara on 11/05/2020.
-//  Copyright © 2020 sara. All rights reserved.
+//  Created by Kreso Lelas on 11/05/2020.
+//  Copyright © 2020 kreso. All rights reserved.
 //
 import UIKit
 
@@ -17,17 +17,65 @@ class QuestionsView: UIView{
     @IBOutlet weak var btn1: UIButton!
     @IBOutlet weak var btn0: UIButton!
     @IBOutlet weak var questionTextBox: UILabel!
-    @IBAction func btn3Pressed(_ sender: Any) {
+    @IBAction func btn3Pressed(_ sender: UIButton) {
         btnPressed(num:3, sender: sender as! UIView)
+        sender.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
+
+        UIView.animate(withDuration: 2.0,
+                                   delay: 0,
+                                   usingSpringWithDamping: CGFloat(0.20),
+                                   initialSpringVelocity: CGFloat(6.0),
+                                   options: UIView.AnimationOptions.allowUserInteraction,
+                                   animations: {
+                                    sender.transform = CGAffineTransform.identity
+            },
+                                   completion: { Void in()  }
+        )
     }
     
-    @IBAction func btn2Pressed(_ sender: Any) {
+    @IBAction func btn2Pressed(_ sender: UIButton) {
          btnPressed(num:2, sender: sender as! UIView)
+        sender.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
+
+        UIView.animate(withDuration: 2.0,
+                                   delay: 0,
+                                   usingSpringWithDamping: CGFloat(0.20),
+                                   initialSpringVelocity: CGFloat(6.0),
+                                   options: UIView.AnimationOptions.allowUserInteraction,
+                                   animations: {
+                                    sender.transform = CGAffineTransform.identity
+            },
+                                   completion: { Void in()  }
+        )
     }
-    @IBAction func btn1Pressed(_ sender: Any) {
+    @IBAction func btn1Pressed(_ sender: UIButton) {
+        sender.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
+
+        UIView.animate(withDuration: 2.0,
+                                   delay: 0,
+                                   usingSpringWithDamping: CGFloat(0.20),
+                                   initialSpringVelocity: CGFloat(6.0),
+                                   options: UIView.AnimationOptions.allowUserInteraction,
+                                   animations: {
+                                    sender.transform = CGAffineTransform.identity
+            },
+                                   completion: { Void in()  }
+        )
          btnPressed(num:1, sender: sender as! UIView)
     }
-    @IBAction func btn0Pressed(_ sender: Any) {
+    @IBAction func btn0Pressed(_ sender: UIButton) {
+        sender.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
+
+        UIView.animate(withDuration: 2.0,
+                                   delay: 0,
+                                   usingSpringWithDamping: CGFloat(0.20),
+                                   initialSpringVelocity: CGFloat(6.0),
+                                   options: UIView.AnimationOptions.allowUserInteraction,
+                                   animations: {
+                                    sender.transform = CGAffineTransform.identity
+            },
+                                   completion: { Void in()  }
+        )
          btnPressed(num:0, sender: sender as! UIView)
     }
     @IBOutlet var rootView: UIView!
