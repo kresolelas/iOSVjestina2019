@@ -246,11 +246,23 @@
                                     <action selector="klik:" destination="DKO-Da-vpr" eventType="touchUpInside" id="Ymb-hX-zXN"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U4y-t3-hnR">
+                                <rect key="frame" x="8" y="86" width="398" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="e2e-A0-SwF" firstAttribute="bottom" secondItem="U4y-t3-hnR" secondAttribute="bottom" constant="8" id="4Gj-LR-TfD"/>
+                            <constraint firstItem="e2e-A0-SwF" firstAttribute="trailing" secondItem="U4y-t3-hnR" secondAttribute="trailing" constant="8" id="4Lq-5Y-Dqm"/>
+                            <constraint firstItem="U4y-t3-hnR" firstAttribute="leading" secondItem="e2e-A0-SwF" secondAttribute="leading" constant="8" id="yfF-TT-1At"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="e2e-A0-SwF"/>
                     </view>
                     <navigationItem key="navigationItem" id="9by-Ag-EQT"/>
+                    <connections>
+                        <outlet property="tableView" destination="U4y-t3-hnR" id="oo5-g1-ll3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ngh-fu-JO2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

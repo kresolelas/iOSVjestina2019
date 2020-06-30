@@ -38,11 +38,13 @@ class LoginViewController: UIViewController {
     
     }
     private func animation(viewAnimation: UIView) {
+        viewAnimation.frame.origin.x = -viewAnimation.frame.width
+        passwordField.frame.origin.x = -passwordField.frame.width
         UIView.animate(withDuration: 1, animations: {
-            viewAnimation.frame.origin.x = -viewAnimation.frame.width*3
+            viewAnimation.frame.origin.x += viewAnimation.frame.width*2
         }) { (_) in
-            UIView.animate(withDuration: 1, delay: 1, options: [.curveEaseIn], animations: {
-                viewAnimation.frame.origin.x -= viewAnimation.frame.width
+            UIView.animate(withDuration: 1, delay: 0.5, options: [.curveEaseIn], animations: {
+                self.passwordField.frame.origin.x += self.passwordField.frame.width*2
             })
 
         }

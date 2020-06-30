@@ -12,16 +12,24 @@ class QuizServis {
     func getLeaderBoards2(quizId:Int) {
         print("zatrazili smo")
         let token = UserDefaults.standard.object(forKey: "user_token")
-        if let url = URL(string:"https://iosquiz.herokuap.com/api/score?quiz_id=\(quizId)") {
+        if let url = URL(string:"https://iosquiz.herokuapp.com/api/score?quiz_id=\(quizId)") {
+            print("zatrazili smo sa urla ","https://iosquiz.herokuapp.com/api/score?quiz_id=\(quizId)", " s tokenom ", token)
             var request = URLRequest(url: url)
             request.httpMethod="GET"
             request.addValue("application/json", forHTTPHeaderField: "Content-Type")
             request.addValue("\(token)", forHTTPHeaderField: "Authorization")
             let dataTask = URLSession.shared.dataTask(with: request) { (data, response, error) in
-                if let data = data {
+                
+                if let data2 = data {
+                    var json:[String: Any]=[:]
+                    do{
+                        json = try (JSONSerialization.jsonObject(with: data2, options: []) as? [String : Any])!
+                    }catch{
+                        print("fejl")
+                    }
+                   
                     do {
-                        print(data)
-                        print("dobili")
+                        print(json)
                     }
 
                 } else {
