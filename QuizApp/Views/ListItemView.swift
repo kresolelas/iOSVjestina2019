@@ -2,8 +2,8 @@
 //  ListItemView.swift
 //  QuizApp
 //
-//  Created by sara on 08/06/2020.
-//  Copyright © 2020 sara. All rights reserved.
+//  Created by Kreso Lelas on 08/06/2020.
+//  Copyright © 2020 kreso. All rights reserved.
 //
 
 import UIKit
